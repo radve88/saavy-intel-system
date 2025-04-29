@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ report_title }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #aa336a; }
+        .section { margin-top: 30px; }
+        .item { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <h1>{{ report_title }}</h1>
+    <p>Generated on: {{ date }}</p>
+
+    <div class="section">
+        <h2>Trending Styles</h2>
+        {% for trend in trends %}
+        <div class="item">
+            <strong>{{ trend.name }}</strong>: {{ trend.description }}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="section">
+        <h2>Upcoming Events</h2>
+        {% for event in events %}
+        <div class="item">
+            {{ event.date }} – {{ event.title }}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="section">
+        <h2>Retail Activity</h2>
+        {% for retail in retailers %}
+        <div class="item">
+            <strong>{{ retail.name }}</strong>: {{ retail.summary }}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
