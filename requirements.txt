@@ -1,0 +1,11 @@
+requests
+beautifulsoup4
+pandas
+playwright
+transformers
+datasets
+scikit-learn
+jinja2
+python-dotenv
+nltk
+spacy
