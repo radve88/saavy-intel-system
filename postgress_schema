@@ -1,0 +1,27 @@
+-- trends
+CREATE TABLE fashion_trends (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    description TEXT,
+    category TEXT,
+    source_url TEXT,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- events
+CREATE TABLE rajkot_events (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    date DATE,
+    description TEXT,
+    source_url TEXT
+);
+
+-- retailers
+CREATE TABLE retailers (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    summary TEXT,
+    location TEXT,
+    last_active TIMESTAMP
+);
